@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const navLinks = [
@@ -19,17 +20,15 @@ export default function Navbar() {
     <header style={{ background: "#fff", borderBottom: "1px solid var(--brand-border)", position: "sticky", top: 0, zIndex: 100 }}>
       <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "1rem" }}>
         {/* Logo */}
-        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "0.5rem" }}>
-          <span style={{
-            background: "var(--brand-red)",
-            color: "#fff",
-            fontWeight: 800,
-            fontSize: "1.1rem",
-            padding: "0.25rem 0.6rem",
-            borderRadius: "0.35rem",
-            letterSpacing: "-0.02em",
-          }}>IVA</span>
-          <span style={{ fontWeight: 700, fontSize: "1.1rem", color: "var(--fg)" }}>Logistics</span>
+        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+          <Image
+            src="/iva-logo.jpg"
+            alt="IVA Logistics — Swift & Reliable Delivery"
+            width={80}
+            height={40}
+            style={{ objectFit: "contain", display: "block" }}
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}
