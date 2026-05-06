@@ -17,7 +17,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header style={{ background: "#fff", borderBottom: "1px solid var(--brand-border)", position: "sticky", top: 0, zIndex: 100 }}>
+    <header style={{ background: "#fff", borderBottom: "1px solid var(--brand-border)", position: "sticky", top: 0, zIndex: 100, width: "100%", maxWidth: "100vw", overflow: "hidden" }}>
       <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "1rem" }}>
         {/* Logo */}
         <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
