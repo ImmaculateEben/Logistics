@@ -181,9 +181,11 @@ export default function TrackPage() {
 
           {!searched && (
             <div style={{ textAlign: "center", color: "var(--brand-muted)" }}>
-              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ddd" strokeWidth="1" style={{ marginBottom: "1rem" }}>
-                <rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
-              </svg>
+              <div className="truck-animate" style={{ marginBottom: "1rem", display: "inline-block" }}>
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ddd" strokeWidth="1">
+                  <rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+                </svg>
+              </div>
               <p>Enter your tracking ID above to see your delivery status.</p>
             </div>
           )}

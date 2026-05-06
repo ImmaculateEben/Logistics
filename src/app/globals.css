@@ -154,6 +154,18 @@ label {
   from { opacity: 0; transform: scale(0.88); }
   to   { opacity: 1; transform: scale(1); }
 }
+@keyframes truckDrive {
+  0%   { transform: translateX(0);    }
+  45%  { transform: translateX(60px); }
+  50%  { transform: translateX(60px) scaleX(-1); }
+  95%  { transform: translateX(0)    scaleX(-1); }
+  100% { transform: translateX(0)    scaleX(1);  }
+}
+.truck-animate {
+  animation: truckDrive 2.8s ease-in-out infinite;
+  display: inline-block;
+  transform-origin: center;
+}
 
 /* --- Scroll-triggered reveal classes ---
    Elements start hidden; JS adds .visible to play the animation */
