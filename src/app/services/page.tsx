@@ -109,7 +109,7 @@ export default function ServicesPage() {
       `}</style>
 
       {/* CTA */}
-      <section style={{ background: "var(--brand-red)", color: "#fff", padding: "3.5rem 1rem", textAlign: "center" }}>
+      <section style={{ background: "var(--brand-red)", color: "#fff", padding: "3.5rem 0", textAlign: "center" }}>
         <div className="container reveal" style={{ maxWidth: 560 }}>
           <h2 style={{ fontSize: "1.75rem", fontWeight: 800, marginBottom: "0.75rem" }}>Ready to get started?</h2>
           <p style={{ color: "rgba(255,255,255,0.85)", marginBottom: "1.75rem" }}>Book a delivery now or calculate your price first.</p>

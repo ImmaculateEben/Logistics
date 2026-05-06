@@ -334,7 +334,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact CTA */}
-      <section style={{ background: "var(--brand-red)", color: "#fff", padding: "3.5rem 1rem", textAlign: "center" }}>
+      <section style={{ background: "var(--brand-red)", color: "#fff", padding: "3.5rem 0", textAlign: "center" }}>
         <div className="container reveal" style={{ maxWidth: 640 }}>
           <h2 style={{ fontSize: "1.75rem", fontWeight: 800, marginBottom: "0.75rem" }}>Ready to book a delivery?</h2>
           <p style={{ color: "rgba(255,255,255,0.85)", marginBottom: "1.75rem" }}>
