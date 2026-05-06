@@ -5,12 +5,36 @@ import Link from "next/link";
 export const metadata: Metadata = { title: "Vendor Partners" };
 
 const benefits = [
-  { title: "Faster Bookings", desc: "Your business pickup address is saved. Creating new delivery orders takes seconds." },
-  { title: "Order History", desc: "View all your past and active deliveries in one place. Filter by date or status." },
-  { title: "Priority Dispatch", desc: "Vendor accounts get priority handling during busy hours." },
-  { title: "Dedicated Support", desc: "Direct WhatsApp line for vendor queries, updates, and escalations." },
-  { title: "Flexible Billing", desc: "Track spending and manage payments across multiple deliveries." },
-  { title: "Live Tracking", desc: "Track every delivery in real time using unique tracking IDs." },
+  {
+    title: "Faster Bookings",
+    desc: "Your business pickup address is saved. Creating new delivery orders takes seconds.",
+    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" width={20} height={20}><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>),
+  },
+  {
+    title: "Order History",
+    desc: "View all your past and active deliveries in one place. Filter by date or status.",
+    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" width={20} height={20}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>),
+  },
+  {
+    title: "Priority Dispatch",
+    desc: "Vendor accounts get priority handling during busy hours.",
+    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" width={20} height={20}><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>),
+  },
+  {
+    title: "Dedicated Support",
+    desc: "Direct WhatsApp line for vendor queries, updates, and escalations.",
+    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" width={20} height={20}><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>),
+  },
+  {
+    title: "Flexible Billing",
+    desc: "Track spending and manage payments across multiple deliveries.",
+    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" width={20} height={20}><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>),
+  },
+  {
+    title: "Live Tracking",
+    desc: "Track every delivery in real time using unique tracking IDs.",
+    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" width={20} height={20}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>),
+  },
 ];
 
 const vendorTypes = [
@@ -76,7 +100,7 @@ export default function VendorsPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem" }}>
             {benefits.map((b, i) => (
               <div key={b.title} className="reveal" style={{ background: "#fff", borderRadius: "0.75rem", padding: "1.5rem", border: "1px solid var(--brand-border)", transitionDelay: `${i * 0.07}s` }}>
-                <div style={{ width: 10, height: 10, background: "var(--brand-red)", borderRadius: "50%", marginBottom: "0.75rem" }} />
+                <div style={{ width: 40, height: 40, background: "var(--brand-red)", borderRadius: "50%", marginBottom: "0.75rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{b.icon}</div>
                 <h3 style={{ fontWeight: 700, marginBottom: "0.4rem" }}>{b.title}</h3>
                 <p style={{ color: "var(--brand-muted)", fontSize: "0.9rem", lineHeight: 1.6 }}>{b.desc}</p>
               </div>

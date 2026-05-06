@@ -5,12 +5,76 @@ import Image from "next/image";
 export const metadata: Metadata = { title: "About Us" };
 
 const reasons = [
-  { title: "Fast & Reliable", desc: "We pick up and deliver on time, every time. Your package is our priority." },
-  { title: "Local Knowledge", desc: "We know Owerri inside out — every street, area, and shortcut." },
-  { title: "Easy Booking", desc: "Book via our website or WhatsApp in under 2 minutes." },
-  { title: "Live Tracking", desc: "Track your delivery progress with a unique tracking ID." },
-  { title: "Vendor Support", desc: "Built for businesses — fast repeat bookings, order history, and dedicated service." },
-  { title: "Friendly Team", desc: "Our riders are professional, courteous, and careful with your items." },
+  {
+    title: "Fast & Reliable",
+    desc: "We pick up and deliver on time, every time. Your package is our priority.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 2" />
+        <path d="M7 3 4 6" />
+        <path d="m17 3 3 3" />
+      </svg>
+    ),
+  },
+  {
+    title: "Local Knowledge",
+    desc: "We know Owerri inside out — every street, area, and shortcut.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+        <path d="M9 18 3 21V6l6-3 6 3 6-3v15l-6 3-6-3Z" />
+        <path d="M9 3v15" />
+        <path d="M15 6v15" />
+      </svg>
+    ),
+  },
+  {
+    title: "Easy Booking",
+    desc: "Book via our website or WhatsApp in under 2 minutes.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+        <rect x="6" y="3" width="12" height="18" rx="2" />
+        <path d="M10 7h4" />
+        <path d="m9 14 2 2 4-5" />
+      </svg>
+    ),
+  },
+  {
+    title: "Live Tracking",
+    desc: "Track your delivery progress with a unique tracking ID.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+        <path d="M12 21s6-5.2 6-11a6 6 0 0 0-12 0c0 5.8 6 11 6 11Z" />
+        <circle cx="12" cy="10" r="2" />
+        <path d="M3 20h6" />
+        <path d="M15 20h6" />
+      </svg>
+    ),
+  },
+  {
+    title: "Vendor Support",
+    desc: "Built for businesses — fast repeat bookings, order history, and dedicated service.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+        <path d="M4 10h16" />
+        <path d="M5 10l1-5h12l1 5" />
+        <path d="M6 10v9h12v-9" />
+        <path d="M9 19v-5h6v5" />
+      </svg>
+    ),
+  },
+  {
+    title: "Friendly Team",
+    desc: "Our riders are professional, courteous, and careful with your items.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M8 10h.01" />
+        <path d="M16 10h.01" />
+        <path d="M8.5 15c1 1.2 2.2 1.8 3.5 1.8s2.5-.6 3.5-1.8" />
+      </svg>
+    ),
+  },
 ];
 
 export default function AboutPage() {
@@ -66,7 +130,9 @@ export default function AboutPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem" }}>
             {reasons.map((r, i) => (
               <div key={r.title} className="reveal" style={{ background: "#fff", borderRadius: "0.75rem", padding: "1.5rem", border: "1px solid var(--brand-border)", transitionDelay: `${i * 0.08}s` }}>
-                <div style={{ width: 10, height: 10, background: "var(--brand-red)", borderRadius: "50%", marginBottom: "1rem" }} />
+                <div style={{ width: 48, height: 48, background: "rgba(224, 32, 32, 0.1)", color: "var(--brand-red)", borderRadius: "0.75rem", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1rem" }}>
+                  {r.icon}
+                </div>
                 <h3 style={{ fontWeight: 700, marginBottom: "0.4rem" }}>{r.title}</h3>
                 <p style={{ color: "var(--brand-muted)", fontSize: "0.9rem", lineHeight: 1.6 }}>{r.desc}</p>
               </div>
